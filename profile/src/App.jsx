@@ -17,7 +17,6 @@ import "./index.scss";
 const App = () => (
     <Router>
         <Header />
-        <h2>Module02</h2>
         <div className="my-10">
             <Routes>
                 <Route path='/profile' element={<ProfileContent/>}/>

@@ -48,7 +48,9 @@ module.exports = (_, argv) => ({
         pdp: "pdp@http://localhost:3001/remoteEntry.js",
         profile: "profile@http://localhost:3003/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        "./PdpContent": "./src/PdpContent.jsx"
+      },
       shared: {
         ...deps,
         react: {

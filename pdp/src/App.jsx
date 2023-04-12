@@ -14,7 +14,6 @@ import "./index.scss";
 const App = () => (
     <Router>
         <Header />
-        <h2>Module01</h2>
         <div className="my-10">
             <Routes>
                 <Route path='/char/:id' element={<PdpContent/>}/>

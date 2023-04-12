@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getInfo, getInfoById } from "./info";
+import { getInfo } from "./info";
+import { Link } from "react-router-dom";
 
 export default function HomeContent() {
     const [chars, setChars] = useState([]);
@@ -10,11 +11,12 @@ export default function HomeContent() {
 
     return (
         <div className="grid grid-cols-4 gap-5">
-            <h2>Wrapper App</h2>
             {chars.map((char) => (
                 <div key={char.id}>
                     <div>{char.name}</div>
-                    <img src={char.image} alt="image" />
+                    <Link to={`char/${char.id}`}>
+                      <img src={char.image} alt="image" />
+                    </Link>
                 </div>
             ))}
         </div>
